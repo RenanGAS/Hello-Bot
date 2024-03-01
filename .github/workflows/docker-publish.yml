@@ -18,4 +18,5 @@ jobs:
           docker build . -t renangas/hello_bot:latest
       - name: Publish
         run: |
+          docker login -u renangas -p ${{ secrets.DOCKER_HUB_TOKEN }}
           docker push renangas/hello_bot:latest
